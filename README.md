@@ -1,2 +1,3 @@
-# nexeme-pest-control-pvt-ltd
-Exported from Caffeine project: Nexeme Pest Control Pvt Ltd
+## Nexeme Pest Control Pvt Ltd
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

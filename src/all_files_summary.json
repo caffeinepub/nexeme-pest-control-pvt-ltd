@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods defined.",
+  "feature_evidence.json": "Feature evidence mapping listing project features, related files, components, and test IDs.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose of each frontend file.",
+  "frontend/index.css": "Global Tailwind-based styles defining OKLCH color tokens and light/dark theme variables.",
+  "frontend/index.html": "HTML entry point including SEO metadata, Open Graph tags, and script mount point.",
+  "frontend/src/App.tsx": "Main React app configuring TanStack Router routes and shared layout with header and footer.",
+  "frontend/src/components/layout/SiteFooter.tsx": "Footer component with branding, navigation links, service list, and contact details.",
+  "frontend/src/components/layout/SiteHeader.tsx": "Header with logo, navigation, mobile menu, and call‑to‑action phone and quote buttons.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages an authenticated or anonymous backend actor using React Query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and provider for managing Internet Identity authentication using Dfinity AuthClient, including login state and stored identities.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file reserved for future React Query hooks; currently exports nothing.",
+  "frontend/src/index.css": "Defines Tailwind base, component, and utility layers with custom CSS variables for a green-themed light/dark palette and typography styling.",
+  "frontend/src/main.tsx": "Application entry that sets up React Query and wraps the app with the InternetIdentityProvider before rendering.",
+  "frontend/src/pages/AboutPage.tsx": "Renders the About page with company story, values, and imagery for Nexeme pest control services.",
+  "frontend/src/pages/ContactPage.tsx": "Displays contact information including phone, email, hours, and a hero section for reaching Nexeme.",
+  "frontend/src/pages/HomePage.tsx": "Home page featuring hero content, service highlights, features, and calls to action for Nexeme pest control.",
+  "frontend/src/pages/ServicesPage.tsx": "Lists detailed descriptions and features of all offered pest control services with a hero section and service cards.",
+  "frontend/tailwind.config.js": "Configures Tailwind with dark mode, content paths, custom fonts, colors, animations, and plugins including typography, container queries, and animations.",
+  "project_state.json": "Defines the project state for building the Nexeme Pest Control website, listing features, requirements, contact info, and image assets needed."
+}

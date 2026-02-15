@@ -1,0 +1,126 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-marketing-website-for-nexeme-pest-control-pvt-ltd-with-clear-business-branding-and-the-following-sections-pages-home-services-about-and-contact",
+      "featureTitle": "Create a responsive marketing website for “Nexeme Pest Control Pvt Ltd” with clear business branding and the following sections/pages: Home, Services, About, and Contact.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/SiteFooter.tsx",
+        "frontend/src/components/layout/SiteHeader.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-the-provided-contact-information-prominently-on-the-contact-section-page-and-in-the-site-footer-phone-9053146001-email-inkhiya14-gmail-com",
+      "featureTitle": "Display the provided contact information prominently on the Contact section/page and in the site footer: Phone: 9053146001, Email: inkhiya14@gmail.com.",
+      "files": [
+        "frontend/src/components/layout/SiteFooter.tsx",
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-services-section-that-lists-common-pest-control-service-categories-in-clear-english-e-g-general-pest-control-termite-control-cockroach-control-rodent-control-mosquito-control-bed-bug-control-with-short-descriptions",
+      "featureTitle": "Add a Services section that lists common pest control service categories in clear English (e.g., general pest control, termite control, cockroach control, rodent control, mosquito control, bed bug control) with short descriptions.",
+      "files": [
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-seo-and-sharing-metadata-document-title-meta-description-and-an-open-graph-title-description-using-the-business-name-nexeme-pest-control-pvt-ltd",
+      "featureTitle": "Add basic SEO and sharing metadata (document title, meta description, and an Open Graph title/description) using the business name “Nexeme Pest Control Pvt Ltd”.",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-establish-a-cohesive-distinctive-visual-theme-colors-typography-spacing-and-component-styling-suitable-for-a-professional-pest-control-business-and-apply-it-consistently-across-all-pages-avoid-a-blue-purple-primary-palette",
+      "featureTitle": "Establish a cohesive, distinctive visual theme (colors, typography, spacing, and component styling) suitable for a professional pest control business, and apply it consistently across all pages. Avoid a blue/purple primary palette.",
+      "files": [
+        "frontend/src/components/layout/SiteFooter.tsx",
+        "frontend/src/components/layout/SiteHeader.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-required-generated-images-to-the-project-as-static-assets-under-frontend-public-assets-generated-and-use-them-on-the-site-logo-in-header-footer-hero-image-on-home",
+      "featureTitle": "Add the required generated images to the project as static assets under frontend/public/assets/generated and use them on the site (logo in header/footer; hero image on Home).",
+      "files": [
+        "frontend/src/components/layout/SiteFooter.tsx",
+        "frontend/src/components/layout/SiteHeader.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
