@@ -1,175 +1,96 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Nexeme Pest Control Pvt Ltd marketing website (responsive, branded, SEO-ready)",
+  "title": "Marketing site content expansion: Customer Reviews, Pests page, and Treatment Process details",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Build a responsive 4-page marketing site with navigable Home, Services, About, and Contact sections/pages.",
+      "id": "REQ-7",
+      "summary": "Add a responsive Customer Reviews (testimonials) section to the Home page using static review cards with star ratings.",
       "acceptanceCriteria": [
-        "Site has at least 4 navigable sections/pages: Home, Services, About, Contact.",
-        "Navigation works on desktop and mobile (mobile menu/collapsible nav is acceptable).",
-        "All pages are responsive and readable on common breakpoints (mobile/tablet/desktop)."
+        "Home page includes a clearly labeled \"Customer Reviews\" section.",
+        "At least 6 testimonials are displayed as consistent cards (name + rating + review text; service type optional).",
+        "Section is responsive (looks good on mobile and desktop) and matches the site’s existing visual theme.",
+        "No backend is required to view testimonials (static content is acceptable)."
       ],
       "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/CustomerReviewsSection.tsx",
+          "operation": "create",
+          "description": "Create a reusable Customer Reviews section component rendering a responsive grid of testimonial cards (reviewer name, star rating, review text, optional service type). Use shadcn-ui Card primitives for consistent styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/testimonials.ts",
+          "operation": "create",
+          "description": "Add a static testimonials data module (at least 6 entries) to keep Home page content clean and ensure no backend dependency."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Wire the new CustomerReviewsSection into the Home page with a clearly labeled \"Customer Reviews\" heading, placed in an appropriate marketing flow and styled to match existing sections. Ensure mobile/desktop responsiveness. Use existing shadcn-ui components already used on the page (e.g., Card/Button); verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create a new Pests & Insects page at /pests with a responsive pest info grid and add header/footer navigation links to it.",
+      "acceptanceCriteria": [
+        "A new route/page exists at a clear URL (e.g., /pests) and is accessible from both the SiteHeader navigation and SiteFooter quick links.",
+        "The page includes a grid/list of common pests/insects where each item includes: name, how to identify, typical signs, and basic prevention tips (English text).",
+        "The page uses existing UI components and styling conventions (cards/sections) and is responsive.",
+        "Existing routes (Home/Services/About/Contact) continue to work unchanged."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PestsPage.tsx",
+          "operation": "create",
+          "description": "Create the \"Pests & Insects\" page with a clear hero/intro and a responsive grid/list of pests (e.g., cockroaches, termites, mosquitoes, bed bugs, ants, rodents). Each pest item must include name, identification notes, typical signs, and prevention tips (English). Use shadcn-ui Card for consistent presentation; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/content/pests.ts",
+          "operation": "create",
+          "description": "Add a static pests/insects content module that supplies the Pests page grid/list data (name, identification, signs, prevention tips) to keep the page component focused on layout."
+        },
         {
           "path": "frontend/src/App.tsx",
-          "operation": "create",
-          "description": "Create the main app shell with routing between Home, Services, About, and Contact, and shared layout (header/footer). Use shadcn-ui components (e.g., navigation button/link styling, mobile menu such as Sheet/Drawer if available) to compose a responsive header navigation; verify the component's usage instructions before implementing."
+          "operation": "modify",
+          "description": "Register the new /pests route in the TanStack Router route tree and wire it to the new PestsPage component, ensuring existing routes remain unchanged."
         },
         {
-          "path": "frontend/src/pages/HomePage.tsx",
+          "path": "frontend/src/components/layout/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Add a \"Pests & Insects\" navigation link (e.g., label \"Pests\") pointing to /pests in both desktop and mobile navigation, keeping active-state styling consistent. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Add a \"Pests & Insects\" quick link to /pests within the footer navigation area, matching existing link styling and layout. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Expand the Services page with a structured \"Our Treatment Process\" section and clear safety notes in plain English.",
+      "acceptanceCriteria": [
+        "Services page includes a dedicated section describing the end-to-end treatment process in clear steps.",
+        "Services page includes safety guidance (e.g., preparation before treatment, aftercare, child/pet considerations) written in plain English.",
+        "Content is presented in a structured, scannable layout (cards, numbered steps, or accordions) consistent with the current design system.",
+        "No backend changes are required for these additional details."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/services/TreatmentProcessSection.tsx",
           "operation": "create",
-          "description": "Create Home page content sections (hero, highlights, CTA) designed for responsive layout and clear branding. Compose with shadcn-ui components such as Card/Button where appropriate; verify the component's usage instructions before implementing."
+          "description": "Create a structured \"Our Treatment Process\" section component presenting the steps (inspection, identification, treatment, prevention, follow-up) in a scannable layout (e.g., numbered cards/steps) consistent with the current theme. Use shadcn-ui Card primitives where appropriate; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/services/SafetyNotesSection.tsx",
+          "operation": "create",
+          "description": "Create a safety notes section component covering family/pet safety, preparation guidance, aftercare, and eco-friendly options in plain English, using a scannable layout consistent with existing sections. Use shadcn-ui Card primitives where appropriate; verify the component's usage instructions before implementing."
         },
         {
           "path": "frontend/src/pages/ServicesPage.tsx",
-          "operation": "create",
-          "description": "Create Services page scaffold and wire in the services list section (cards/grid). Compose with shadcn-ui components such as Card; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/pages/AboutPage.tsx",
-          "operation": "create",
-          "description": "Create About page describing the business in English with professional tone and responsive typography/layout. Compose with shadcn-ui components for consistent section styling; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/pages/ContactPage.tsx",
-          "operation": "create",
-          "description": "Create Contact page scaffold with prominent contact details and optional simple contact CTA content (no integrations). Compose with shadcn-ui components for consistent layout (e.g., Card); verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/layout/SiteHeader.tsx",
-          "operation": "create",
-          "description": "Create reusable header with logo, brand name, and responsive navigation (desktop links + mobile collapsible menu). Use shadcn-ui components to implement accessible menu interactions/styling; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/layout/SiteFooter.tsx",
-          "operation": "create",
-          "description": "Create reusable footer with logo, quick links, and contact details. Use shadcn-ui components/typography utilities for consistent styling; verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Show phone and email prominently on Contact page and in the footer, with clickable tel/mail links.",
-      "acceptanceCriteria": [
-        "Contact page shows phone number and email address exactly as provided.",
-        "Footer contains the same phone number and email address.",
-        "Phone is clickable as a tel: link and email is clickable as a mailto: link."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/ContactPage.tsx",
           "operation": "modify",
-          "description": "Add prominent contact info blocks displaying Phone: 9053146001 and Email: inkhiya14@gmail.com exactly, with tel: and mailto: links. Use shadcn-ui components (e.g., Card) to present info clearly; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/layout/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Include the same phone number (9053146001) and email (inkhiya14@gmail.com) in the footer with tel: and mailto: links. Use shadcn-ui components for consistent link/button styling if applicable; verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Add a Services section listing common pest control categories with short English descriptions in a scannable layout.",
-      "acceptanceCriteria": [
-        "Services section lists at least 5 service categories with short descriptions.",
-        "Text is in English and formatted for easy scanning (cards or a simple grid/list)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/ServicesPage.tsx",
-          "operation": "modify",
-          "description": "Implement a services grid/list (at least 5 categories) with short English descriptions (e.g., general pest control, termite, cockroach, rodent, mosquito, bed bug). Use shadcn-ui Card (and related) components for a clean scannable layout; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/pages/HomePage.tsx",
-          "operation": "modify",
-          "description": "Add a brief services preview section on Home that links/navigates to the full Services page. Use shadcn-ui components (Card/Button) for consistent CTA styling; verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Add basic SEO and sharing metadata using the business name in title and Open Graph tags.",
-      "acceptanceCriteria": [
-        "Browser tab title includes “Nexeme Pest Control Pvt Ltd”.",
-        "A meta description exists and is relevant to pest control services.",
-        "Open Graph title and description tags are present."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/index.html",
-          "operation": "modify",
-          "description": "Add/ensure document title includes “Nexeme Pest Control Pvt Ltd”, add a relevant meta description for pest control services, and include Open Graph title/description meta tags using the business name."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Create and apply a cohesive professional theme (non blue/purple primary) across typography, colors, spacing, and component styling.",
-      "acceptanceCriteria": [
-        "Theme is consistent across navigation, buttons, headings, and section layouts.",
-        "Primary palette is not blue/purple-dominant (unless used only as minor accents).",
-        "Site looks professionally branded and not like default template styling."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "create",
-          "description": "Create global styles and Tailwind base layer theme tokens (CSS variables used by shadcn-ui) with a professional pest-control palette (e.g., greens/earth tones with orange accent), consistent typography, spacing, and section styling. Ensure primary is not blue/purple-dominant. Compose shadcn-ui components rather than editing them; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Adjust Tailwind theme extensions if needed to support the new brand palette/typography/spacing utilities consistently (without making blue/purple the primary)."
-        },
-        {
-          "path": "frontend/src/components/layout/SiteHeader.tsx",
-          "operation": "modify",
-          "description": "Apply the new theme consistently to navigation states (active/hover), button styles, and spacing using Tailwind utilities + shadcn-ui composition; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/layout/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Apply the new theme consistently to footer layout, typography, and link styles using Tailwind utilities + shadcn-ui composition; verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Add required generated images as static assets and use logo in header/footer and hero image on Home.",
-      "acceptanceCriteria": [
-        "Generated images exist in frontend/public/assets/generated with the specified filenames.",
-        "Logo is rendered in the header and footer.",
-        "Hero image is rendered on the Home page without loading via the backend."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/nexeme-logo.dim_512x512.png",
-          "operation": "create",
-          "description": "Add the generated logo image asset at exactly frontend/public/assets/generated/nexeme-logo.dim_512x512.png and ensure it is referenced as a static asset (not via backend)."
-        },
-        {
-          "path": "frontend/public/assets/generated/nexeme-hero.dim_1600x900.png",
-          "operation": "create",
-          "description": "Add the generated hero banner asset at exactly frontend/public/assets/generated/nexeme-hero.dim_1600x900.png and ensure it is referenced as a static asset (not via backend)."
-        },
-        {
-          "path": "frontend/src/components/layout/SiteHeader.tsx",
-          "operation": "modify",
-          "description": "Render the logo image from frontend/public/assets/generated/nexeme-logo.dim_512x512.png in the header alongside the business name, with responsive sizing and accessible alt text. Use shadcn-ui components for consistent layout if applicable; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/layout/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Render the logo image from frontend/public/assets/generated/nexeme-logo.dim_512x512.png in the footer with appropriate sizing and accessible alt text. Use shadcn-ui components for consistent layout if applicable; verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/pages/HomePage.tsx",
-          "operation": "modify",
-          "description": "Render the hero image from frontend/public/assets/generated/nexeme-hero.dim_1600x900.png in the Home hero section with responsive behavior (e.g., aspect/cover) and accessible alt text. Use shadcn-ui components for consistent CTA styling near the hero; verify the component's usage instructions before implementing."
+          "description": "Wire TreatmentProcessSection and SafetyNotesSection into the Services page in a logical position (after service listings and/or before the closing CTA), ensuring the layout remains responsive and consistent with the existing design system. Use existing shadcn-ui components already used on the page (Card/Button); verify the component's usage instructions before implementing."
         }
       ]
     }

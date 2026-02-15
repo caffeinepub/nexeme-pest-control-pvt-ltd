@@ -1,13 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Build a business website for Nexeme Pest Control Pvt Ltd.",
   "architectural_notes": [
     "Website should display business contact info: Mobile 9053146001, Email inkhiya14@gmail.com."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Simple professional logo mark for “Nexeme Pest Control Pvt Ltd” with a clean pest-control motif (nexeme-logo.dim_512x512.png)\n- Wide homepage hero banner image showing a clean, modern home/service scene with subtle pest-control theme, no text (nexeme-hero.dim_1600x900.png)",
   "existing_features": [
     {
       "id": "feature-create-a-responsive-marketing-website-for-nexeme-pest-control-pvt-ltd-with-clear-business-branding-and-the-following-sections-pages-home-services-about-and-contact",
@@ -56,12 +55,54 @@
         "REQ-6"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-a-customer-reviews-testimonials-section-to-the-marketing-website-with-multiple-review-cards-showing-reviewer-name-star-rating-short-review-text-and-optional-service-type",
+      "title": "Add a \"Customer Reviews\" (testimonials) section to the marketing website, with multiple review cards showing reviewer name, star rating, short review text, and (optional) service type.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-pests-insects-page-that-provides-clear-identification-and-basic-info-for-common-pests-insects-relevant-to-pest-control-e-g-cockroaches-termites-mosquitoes-bed-bugs-ants-rodents-and-add-navigation-links-to-this-page-from-the-header-and-footer",
+      "title": "Create a new \"Pests & Insects\" page that provides clear identification and basic info for common pests/insects relevant to pest control (e.g., cockroaches, termites, mosquitoes, bed bugs, ants, rodents), and add navigation links to this page from the header and footer.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-existing-services-content-to-include-more-detailed-information-about-effective-pest-treatment-methods-including-a-clear-our-treatment-process-section-inspection-identification-treatment-prevention-follow-up-and-safety-notes-family-pet-safety-and-eco-friendly-options-using-user-facing-english-text",
+      "title": "Expand the existing Services content to include more detailed information about effective pest treatment methods, including a clear \"Our Treatment Process\" section (inspection, identification, treatment, prevention, follow-up) and safety notes (family/pet safety and eco-friendly options) using user-facing English text.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
     {
       "id": "AR-1",
       "summary": "Create a website for Nexeme Pest Control Pvt Ltd including business contact details (phone and email).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add a customer reviews/testimonials section to the website.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a section/page detailing common pests and insects (information/identification details).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Include more detailed information about effective pest treatment methods/services on the website.",
       "reqIds": [],
       "status": "pending"
     }

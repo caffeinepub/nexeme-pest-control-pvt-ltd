@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, Clock, Award, CheckCircle, Phone, ArrowRight } from 'lucide-react';
+import CustomerReviewsSection from '@/components/marketing/CustomerReviewsSection';
 
 export default function HomePage() {
   const features = [
@@ -136,6 +137,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Customer Reviews Section */}
+      <CustomerReviewsSection />
+
       {/* CTA Section */}
       <section className="container py-16 md:py-24">
         <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
@@ -148,15 +152,16 @@ export default function HomePage() {
                 Contact us today for a free consultation and quote. Our team is ready to help you solve your pest problems.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg" className="text-base">
+                <Button asChild size="lg">
                   <Link to="/contact">
                     Get Free Quote
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-base">
+                <Button asChild variant="outline" size="lg">
                   <a href="tel:9053146001">
                     <Phone className="mr-2 h-4 w-4" />
-                    9053146001
+                    Call 9053146001
                   </a>
                 </Button>
               </div>

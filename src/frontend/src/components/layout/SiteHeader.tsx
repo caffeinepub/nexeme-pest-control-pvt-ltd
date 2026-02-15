@@ -12,6 +12,7 @@ export default function SiteHeader() {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/services', label: 'Services' },
+    { path: '/pests', label: 'Pests' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
   ];

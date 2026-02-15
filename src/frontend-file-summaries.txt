@@ -1,13 +1,19 @@
 {
-  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining four routes (Home, Services, About, Contact) with a shared layout containing header and footer.",
-  "frontend/src/components/layout/SiteHeader.tsx": "Responsive site header with logo, navigation menu, and mobile sheet menu; includes active route highlighting and call-to-action buttons.",
-  "frontend/src/components/layout/SiteFooter.tsx": "Site footer with branding, quick links, services list, contact information, and attribution with dynamic year and UTM-tracked caffeine.ai link.",
-  "frontend/src/pages/HomePage.tsx": "Home page featuring hero section with generated images, feature highlights, services preview grid, and call-to-action sections.",
-  "frontend/src/pages/ServicesPage.tsx": "Services page displaying six detailed pest control service cards with features, icons, and descriptions, plus a \"Why Choose Us\" section.",
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining five routes (Home, Services, Pests, About, Contact) with a shared layout containing header and footer.",
+  "frontend/src/components/layout/SiteHeader.tsx": "Responsive site header with logo, navigation menu including new Pests link, and mobile sheet menu; includes active route highlighting and call-to-action buttons.",
+  "frontend/src/components/layout/SiteFooter.tsx": "Site footer with branding, quick links including Pests & Insects page, services list, contact information, and attribution with dynamic year and UTM-tracked caffeine.ai link.",
+  "frontend/src/pages/HomePage.tsx": "Home page featuring hero section, feature highlights, services preview grid, customer reviews section with testimonials, and call-to-action sections.",
+  "frontend/src/pages/ServicesPage.tsx": "Services page displaying six detailed pest control service cards, treatment process section with 5-step workflow, safety notes section with preparation and aftercare guidelines, and \"Why Choose Us\" section.",
   "frontend/src/pages/AboutPage.tsx": "About page with company story, core values grid, differentiators list, and call-to-action encouraging visitors to contact.",
   "frontend/src/pages/ContactPage.tsx": "Contact page with prominent phone and email display, business hours, service process steps, and multiple contact CTAs.",
   "frontend/src/index.css": "Global styles with nature-inspired green/earth tone OKLCH color system for both light and dark modes, avoiding blue/purple primary colors.",
   "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom color tokens, Inter font family, and consistent design system utilities.",
   "frontend/index.html": "HTML entry point with SEO meta tags, Open Graph tags, and descriptive title including business name.",
-  "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks when backend functionality is added."
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks when backend functionality is added.",
+  "frontend/src/pages/PestsPage.tsx": "Pests & Insects information page with hero section and responsive grid displaying six common pests with identification details, infestation signs, and prevention tips.",
+  "frontend/src/content/testimonials.ts": "Static testimonials data module containing six customer reviews with names, ratings, review text, and service types.",
+  "frontend/src/content/pests.ts": "Static pests data module containing detailed information about six common pests including identification, signs of infestation, and prevention tips.",
+  "frontend/src/components/marketing/CustomerReviewsSection.tsx": "Reusable customer reviews section component rendering a responsive grid of testimonial cards with reviewer names, star ratings, review text, and optional service types.",
+  "frontend/src/components/services/TreatmentProcessSection.tsx": "Treatment process section component presenting a 5-step pest control workflow (inspection, identification, treatment, prevention, follow-up) in numbered cards with icons, using Sparkles icon for treatment step.",
+  "frontend/src/components/services/SafetyNotesSection.tsx": "Safety notes section component displaying four categories of safety information (family/pet safety, preparation, aftercare, eco-friendly options) in a scannable card layout."
 }

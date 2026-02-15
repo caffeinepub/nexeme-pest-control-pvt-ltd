@@ -1,132 +1,78 @@
 {
   "kind": "build_request",
-  "title": "Marketing website for Nexeme Pest Control Pvt Ltd (contact details included)",
+  "title": "Add customer reviews, pests & insects details, and more detailed treatment information",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Create a responsive marketing website for “Nexeme Pest Control Pvt Ltd” with clear business branding and the following sections/pages: Home, Services, About, and Contact.",
+      "id": "REQ-7",
+      "text": "Add a \"Customer Reviews\" (testimonials) section to the marketing website, with multiple review cards showing reviewer name, star rating, short review text, and (optional) service type.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
         ],
         "quotes": [
-          "Nexeme pest control pvt ltd ... Please create a website for me"
+          "With customer reviews ... on this website ..."
         ]
       },
       "acceptanceCriteria": [
-        "Site has at least 4 navigable sections/pages: Home, Services, About, Contact.",
-        "Navigation works on desktop and mobile (mobile menu/collapsible nav is acceptable).",
-        "All pages are responsive and readable on common breakpoints (mobile/tablet/desktop)."
+        "Home page includes a clearly labeled \"Customer Reviews\" section.",
+        "At least 6 testimonials are displayed as consistent cards (name + rating + review text; service type optional).",
+        "Section is responsive (looks good on mobile and desktop) and matches the site’s existing visual theme.",
+        "No backend is required to view testimonials (static content is acceptable)."
       ]
     },
     {
-      "id": "REQ-2",
-      "text": "Display the provided contact information prominently on the Contact section/page and in the site footer: Phone: 9053146001, Email: inkhiya14@gmail.com.",
+      "id": "REQ-8",
+      "text": "Create a new \"Pests & Insects\" page that provides clear identification and basic info for common pests/insects relevant to pest control (e.g., cockroaches, termites, mosquitoes, bed bugs, ants, rodents), and add navigation links to this page from the header and footer.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
         ],
         "quotes": [
-          "Mobile no 9053146001",
-          "Email id inkhiya14@gmail.com"
+          "... Pests and Insects details on this website ..."
         ]
       },
       "acceptanceCriteria": [
-        "Contact page shows phone number and email address exactly as provided.",
-        "Footer contains the same phone number and email address.",
-        "Phone is clickable as a tel: link and email is clickable as a mailto: link."
+        "A new route/page exists at a clear URL (e.g., /pests) and is accessible from both the SiteHeader navigation and SiteFooter quick links.",
+        "The page includes a grid/list of common pests/insects where each item includes: name, how to identify, typical signs, and basic prevention tips (English text).",
+        "The page uses existing UI components and styling conventions (cards/sections) and is responsive.",
+        "Existing routes (Home/Services/About/Contact) continue to work unchanged."
       ]
     },
     {
-      "id": "REQ-3",
-      "text": "Add a Services section that lists common pest control service categories in clear English (e.g., general pest control, termite control, cockroach control, rodent control, mosquito control, bed bug control) with short descriptions.",
+      "id": "REQ-9",
+      "text": "Expand the existing Services content to include more detailed information about effective pest treatment methods, including a clear \"Our Treatment Process\" section (inspection, identification, treatment, prevention, follow-up) and safety notes (family/pet safety and eco-friendly options) using user-facing English text.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
+        ],
+        "quotes": [
+          "... more effective pest treatment details alsoare mentioned on this website"
         ]
       },
       "acceptanceCriteria": [
-        "Services section lists at least 5 service categories with short descriptions.",
-        "Text is in English and formatted for easy scanning (cards or a simple grid/list)."
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "text": "Add basic SEO and sharing metadata (document title, meta description, and an Open Graph title/description) using the business name “Nexeme Pest Control Pvt Ltd”.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Browser tab title includes “Nexeme Pest Control Pvt Ltd”.",
-        "A meta description exists and is relevant to pest control services.",
-        "Open Graph title and description tags are present."
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Establish a cohesive, distinctive visual theme (colors, typography, spacing, and component styling) suitable for a professional pest control business, and apply it consistently across all pages. Avoid a blue/purple primary palette.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Theme is consistent across navigation, buttons, headings, and section layouts.",
-        "Primary palette is not blue/purple-dominant (unless used only as minor accents).",
-        "Site looks professionally branded and not like default template styling."
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Add the required generated images to the project as static assets under frontend/public/assets/generated and use them on the site (logo in header/footer; hero image on Home).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Generated images exist in frontend/public/assets/generated with the specified filenames.",
-        "Logo is rendered in the header and footer.",
-        "Hero image is rendered on the Home page without loading via the backend."
+        "Services page includes a dedicated section describing the end-to-end treatment process in clear steps.",
+        "Services page includes safety guidance (e.g., preparation before treatment, aftercare, child/pet considerations) written in plain English.",
+        "Content is presented in a structured, scannable layout (cards, numbered steps, or accordions) consistent with the current design system.",
+        "No backend changes are required for these additional details."
       ]
     }
   ],
   "constraints": [
-    "Use English for all user-facing website text.",
-    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui (compose these components instead).",
-    "Do not introduce third-party authentication providers; only Internet Identity is supported (not required for this website).",
-    "Backend must remain a single Motoko actor if any backend changes are later introduced."
+    "Do not modify files under frontend/src/components/ui or any other immutable paths listed in SYSTEM_CONTEXT.",
+    "Keep the application as a static marketing site (no requirement for review submission, moderation, or persistence unless explicitly requested later).",
+    "Backend must remain single-actor; avoid adding backend work unless necessary (this change set should be frontend-only)."
   ],
   "nonGoals": [
-    "Customer login/dashboard.",
-    "Online payments or subscriptions.",
-    "Real-time chat or WhatsApp/SMS/email integrations.",
-    "External database integrations (Postgres/MySQL/Mongo/Redis)."
+    "Building a backend/admin panel to create, edit, or store customer reviews.",
+    "Integrating third-party review platforms (e.g., Google Reviews) or external APIs.",
+    "Adding real-time features (chat, live updates) or third-party authentication beyond existing Internet Identity support."
   ],
   "imageRequirements": {
-    "required": [
-      "Simple professional logo mark for “Nexeme Pest Control Pvt Ltd” with a clean pest-control motif (nexeme-logo.dim_512x512.png)",
-      "Wide homepage hero banner image showing a clean, modern home/service scene with subtle pest-control theme, no text (nexeme-hero.dim_1600x900.png)"
-    ],
+    "required": [],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }

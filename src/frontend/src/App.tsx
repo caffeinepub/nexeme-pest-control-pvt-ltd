@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import PestsPage from './pages/PestsPage';
 
 // Layout component that wraps all pages
 function RootLayout() {
@@ -48,12 +49,19 @@ const contactRoute = createRoute({
   component: ContactPage,
 });
 
+const pestsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/pests',
+  component: PestsPage,
+});
+
 // Create route tree
 const routeTree = rootRoute.addChildren([
   indexRoute,
   servicesRoute,
   aboutRoute,
   contactRoute,
+  pestsRoute,
 ]);
 
 // Create router

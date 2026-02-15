@@ -2,6 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Link } from '@tanstack/react-router';
 import { Bug, Home, Rat, Droplets, Bed, Shield, CheckCircle } from 'lucide-react';
+import TreatmentProcessSection from '@/components/services/TreatmentProcessSection';
+import SafetyNotesSection from '@/components/services/SafetyNotesSection';
 
 export default function ServicesPage() {
   const services = [
@@ -88,79 +90,83 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Treatment Process Section */}
+      <TreatmentProcessSection />
+
+      {/* Safety Notes Section */}
+      <SafetyNotesSection />
+
       {/* Why Choose Us */}
-      <section className="bg-muted/30 py-16 md:py-24">
-        <div className="container">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Why Choose Our Services?
-              </h2>
-              <div className="space-y-4">
-                <div className="flex gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <CheckCircle className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Licensed & Certified</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Our technicians are fully licensed, trained, and certified in the latest pest control methods.
-                    </p>
-                  </div>
+      <section className="container py-16 md:py-24">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Why Choose Our Services?
+            </h2>
+            <div className="space-y-4">
+              <div className="flex gap-4">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <CheckCircle className="h-5 w-5" />
                 </div>
-                <div className="flex gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <CheckCircle className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Eco-Friendly Solutions</h3>
-                    <p className="text-sm text-muted-foreground">
-                      We prioritize environmentally responsible products that are safe for your family and pets.
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Licensed & Certified</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Our technicians are fully licensed, trained, and certified in the latest pest control methods.
+                  </p>
                 </div>
-                <div className="flex gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <CheckCircle className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Guaranteed Results</h3>
-                    <p className="text-sm text-muted-foreground">
-                      We stand behind our work with service guarantees and follow-up visits as needed.
-                    </p>
-                  </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <CheckCircle className="h-5 w-5" />
                 </div>
-                <div className="flex gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <CheckCircle className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Flexible Scheduling</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Same-day and emergency services available. We work around your schedule.
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Eco-Friendly Solutions</h3>
+                  <p className="text-sm text-muted-foreground">
+                    We prioritize environmentally responsible products that are safe for your family and pets.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <CheckCircle className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Guaranteed Results</h3>
+                  <p className="text-sm text-muted-foreground">
+                    We stand behind our work with service guarantees and follow-up visits as needed.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <CheckCircle className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Flexible Scheduling</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Same-day and emergency services available. We work around your schedule.
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="flex items-center">
-              <Card className="w-full border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
-                <CardContent className="p-8 space-y-6">
-                  <h3 className="text-2xl font-bold">Ready to Schedule Service?</h3>
-                  <p className="text-muted-foreground">
-                    Contact us today for a free inspection and quote. Our team will assess your situation and recommend the best solution.
-                  </p>
-                  <div className="space-y-3">
-                    <Button asChild className="w-full" size="lg">
-                      <Link to="/contact">Get Free Quote</Link>
-                    </Button>
-                    <Button asChild variant="outline" className="w-full" size="lg">
-                      <a href="tel:9053146001">Call 9053146001</a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+          </div>
+          <div className="flex items-center">
+            <Card className="w-full border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
+              <CardContent className="p-8 space-y-6">
+                <h3 className="text-2xl font-bold">Ready to Schedule Service?</h3>
+                <p className="text-muted-foreground">
+                  Contact us today for a free inspection and quote. Our team will assess your situation and recommend the best solution.
+                </p>
+                <div className="space-y-3">
+                  <Button asChild className="w-full" size="lg">
+                    <Link to="/contact">Get Free Quote</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full" size="lg">
+                    <a href="tel:9053146001">Call 9053146001</a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

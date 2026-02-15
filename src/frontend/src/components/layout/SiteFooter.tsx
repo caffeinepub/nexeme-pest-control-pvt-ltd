@@ -39,6 +39,9 @@ export default function SiteFooter() {
               <Link to="/services" className="text-sm text-muted-foreground transition-colors hover:text-primary">
                 Services
               </Link>
+              <Link to="/pests" className="text-sm text-muted-foreground transition-colors hover:text-primary">
+                Pests & Insects
+              </Link>
               <Link to="/about" className="text-sm text-muted-foreground transition-colors hover:text-primary">
                 About Us
               </Link>

@@ -1,14 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Create a responsive marketing website for Nexeme Pest Control Pvt Ltd with core business pages, clear services info, prominent contact details, consistent professional theming (non-blue/purple primary palette), and basic SEO metadata.
+**Goal:** Enhance the marketing site with customer testimonials, a new pests/insects information page, and more detailed service treatment guidance.
 
 **Planned changes:**
-- Build 4 navigable, responsive pages/sections: Home, Services, About, Contact, with desktop and mobile-friendly navigation.
-- Add a Services section listing common pest control categories (at least 5) with short English descriptions in a scannable layout.
-- Show contact details prominently on the Contact page and in the footer: Phone 9053146001 (tel: link) and Email inkhiya14@gmail.com (mailto: link).
-- Apply a cohesive visual theme (colors/typography/spacing/component styling) appropriate for a pest control business, avoiding a blue/purple-dominant primary palette.
-- Add basic SEO and sharing metadata: document title, meta description, and Open Graph title/description using “Nexeme Pest Control Pvt Ltd”.
-- Add and use generated static images (logo and hero) from `frontend/public/assets/generated` in header/footer and Home hero.
+- Add a “Customer Reviews” section to the Home page with at least 6 static testimonial cards (reviewer name, star rating, short review text, optional service type), styled to match the existing theme and responsive.
+- Create a new “Pests & Insects” page (e.g., `/pests`) featuring a responsive grid/list of common pests (e.g., cockroaches, termites, mosquitoes, bed bugs, ants, rodents), each with identification details, typical signs, and basic prevention tips; add links to this page in both the header and footer navigation.
+- Expand the Services page with an “Our Treatment Process” section describing clear steps (inspection, identification, treatment, prevention, follow-up) and add plain-English safety notes (family/pet safety, preparation, aftercare, eco-friendly options) in a scannable layout consistent with current styling.
 
-**User-visible outcome:** Visitors can browse a professional, mobile-friendly Nexeme Pest Control Pvt Ltd website, view services and company information, and quickly contact the business via clickable phone/email links.
+**User-visible outcome:** Visitors can read customer testimonials on the Home page, browse a dedicated Pests & Insects page from the site navigation, and view clearer, more detailed treatment process and safety information on the Services page.

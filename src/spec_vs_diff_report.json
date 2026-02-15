@@ -1,74 +1,33 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-15T21:12:29.542Z",
-  "summary": "Diff implements a 4-page responsive marketing site with routing (Home/Services/About/Contact), header/footer branding, contact info with tel/mailto links, services listings with descriptions, and SEO/Open Graph metadata. Use of generated logo/hero images is referenced in UI, but the actual image asset files under frontend/public/assets/generated are not shown in the diff summary. Several additional infrastructure/auth/backend files were added that were not requested.",
-  "missing_requirements": [
-    {
-      "id": "REQ-6",
-      "requirement": "Add the required generated images to the project as static assets under frontend/public/assets/generated with the specified filenames.",
-      "reason": "UI references the generated image paths, but the diff summary does not show the actual image files being added under frontend/public/assets/generated, so existence of the required static assets cannot be verified from the provided diff evidence.",
-      "evidence": [
-        "frontend/src/components/layout/SiteHeader.tsx",
-        "frontend/src/components/layout/SiteFooter.tsx",
-        "frontend/src/pages/HomePage.tsx"
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "requirement": "Footer contains the same phone number and email address exactly as provided (Phone: 9053146001, Email: inkhiya14@gmail.com).",
-      "reason": "The footer file content is truncated mid-email (shows only a partial email string), so it cannot be confirmed from the diff summary that the footer displays the email exactly as provided.",
-      "evidence": [
-        "frontend/src/components/layout/SiteFooter.tsx"
-      ]
-    }
-  ],
+  "generatedAt": "2026-02-15T21:24:09.884Z",
+  "summary": "All three requested frontend features appear implemented: a static Customer Reviews section on Home with 6 testimonial cards, a new /pests page with a responsive grid of pests including identification/signs/prevention, and expanded Services content with an \"Our Treatment Process\" section plus safety/prep/aftercare/eco-friendly notes. Header and footer navigation include the new Pests page link, and routing was updated accordingly.",
+  "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Added an empty Motoko backend actor file.",
-      "reason": "The BuildRequest is for a marketing website and does not request backend changes; adding backend/main.mo is not specified.",
+      "description": "Added/changed footer attribution link behavior (dynamic appIdentifier and UTM-tracked caffeine.ai link) not requested in the BuildRequest.",
+      "reason": "BuildRequest only asked to add navigation links to the new Pests page and did not request changes related to external attribution/UTM tracking or dynamic identifiers.",
       "evidence": [
-        "backend/main.mo"
-      ]
-    },
-    {
-      "description": "Introduced React Query + Internet Identity provider wiring and actor hook behavior for authenticated/anonymous actors.",
-      "reason": "The BuildRequest explicitly notes Internet Identity is supported but not required for this website; no authentication-related functionality was requested for the marketing site.",
-      "evidence": [
-        "frontend/src/main.tsx",
-        "frontend/src/hooks/useActor.ts",
-        "frontend/src/hooks/useInternetIdentity.ts",
-        "frontend/src/hooks/useQueries.ts"
-      ]
-    },
-    {
-      "description": "Added extra (non-requested) Contact page content such as business hours, process steps, and additional CTAs.",
-      "reason": "Only prominent phone/email display was requested for Contact; the additional sections are beyond the explicit requirements.",
-      "evidence": [
-        "frontend/src/pages/ContactPage.tsx"
+        "frontend/src/components/layout/SiteFooter.tsx",
+        "frontend-file-summaries.txt"
       ]
     }
   ],
-  "confidence": 0.66,
+  "confidence": 0.74,
   "changed_files": [
-    "all_files_summary.json",
-    "backend/main.mo",
     "frontend-file-summaries.txt",
-    "frontend/index.css",
-    "frontend/index.html",
     "frontend/src/App.tsx",
     "frontend/src/components/layout/SiteFooter.tsx",
     "frontend/src/components/layout/SiteHeader.tsx",
-    "frontend/src/hooks/useActor.ts",
-    "frontend/src/hooks/useInternetIdentity.ts",
-    "frontend/src/hooks/useQueries.ts",
-    "frontend/src/index.css",
-    "frontend/src/main.tsx",
-    "frontend/src/pages/AboutPage.tsx",
-    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/components/marketing/CustomerReviewsSection.tsx",
+    "frontend/src/components/services/SafetyNotesSection.tsx",
+    "frontend/src/components/services/TreatmentProcessSection.tsx",
+    "frontend/src/content/pests.ts",
+    "frontend/src/content/testimonials.ts",
     "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/PestsPage.tsx",
     "frontend/src/pages/ServicesPage.tsx",
-    "frontend/tailwind.config.js",
     "project_state.json"
   ]
 }
